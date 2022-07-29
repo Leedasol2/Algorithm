@@ -16,7 +16,7 @@ public class parc_Q11 {
 		};
 
 	public static class YMD{
-		
+		 
 		int y;
 		int m;
 		int d;
