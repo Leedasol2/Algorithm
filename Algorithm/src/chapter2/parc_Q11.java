@@ -4,26 +4,31 @@ import java.util.Scanner;
 
 public class parc_Q11 {
 	
+	//년도가 윤년인지 평년인지 반환
 	static int isLeap(int year) {
 		return (year%4==0 && year%100!=0||year%400==0)?1:0;
 	}
 	
+	//달의 일수 반환
 	static int[][] days= {
 			{31,28,31,30,31,30,31,31,30,31,30,31},	//평년
 			{31,29,31,30,31,30,31,31,30,31,30,31}	//윤년
 		};
 
 	public static class YMD{
+		
 		int y;
 		int m;
 		int d;
 		
+		//생성자
 		public YMD(int y, int m, int d) {
 			this.y=y;
 			this.m=m;
 			this.d=d;
 		}
 		
+		//n일 후의 날짜를 반환
 		public YMD after(int n) {
 			int y=this.y;
 			int m=this.m;
@@ -46,6 +51,7 @@ public class parc_Q11 {
 			return new YMD(y,m,d);
 		}
 		
+		//n일 전의 날짜를 반환
 		public YMD before(int n) {
 			int y=this.y;
 			int m=this.m;
